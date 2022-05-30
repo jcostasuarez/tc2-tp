@@ -1,0 +1,11 @@
+* C:\Users\juanc\OneDrive - UTN.BA\UTN\circuitos 2\TP1\7-1.asc
+XU1 N001 N002 Vo opamp Aol=100K GBW=10Meg
+R1 Vo N001 1K
+R2 N001 Vi 1K
+R3 N002 0 1K
+C1 N002 Vi 1µF
+V1 Vi 0 AC 1 0
+.lib opamp.sub
+.ac dec 100 1 1Meg
+.backanno
+.end
