@@ -18,13 +18,13 @@ Ignoring empty pin current: Ix(u8:1)
 Ignoring empty pin current: Ix(u8:2)
 Ignoring empty pin current: Ix(u9:1)
 Ignoring empty pin current: Ix(u9:2)
+Ignoring empty pin current: Ix(u10:1)
+Ignoring empty pin current: Ix(u10:2)
 Ignoring empty pin current: Ix(u11:1)
 Ignoring empty pin current: Ix(u11:2)
-Ignoring empty pin current: Ix(u12:1)
-Ignoring empty pin current: Ix(u12:2)
 
-Date: Mon May 30 16:52:29 2022
-Total elapsed time: 0.112 seconds.
+Date: Mon Jun 13 06:41:28 2022
+Total elapsed time: 0.026 seconds.
 
 tnom = 27
 temp = 27
@@ -35,6 +35,6 @@ tranpoints = 0
 accept = 0
 rejected = 0
 matrix size = 22
-fillins = 21
+fillins = 18
 solver = Normal
 

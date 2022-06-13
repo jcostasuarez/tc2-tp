@@ -1,0 +1,42 @@
+* C:\Users\juanc\OneDrive - UTN.BA\UTN\circuitos_2\TP2\Ej7\spice\ej7tp2.asc
+XU1 N001 0 va opamp Aol=100K GBW=10Meg
+XU2 0 N009 N002 opamp Aol=100K GBW=10Meg
+R6 N009 va 1
+XU3 N006 0 N005 opamp Aol=100K GBW=10Meg
+C2 N005 N009 {1/(2*pi*f0)}
+V1 Vi 0 AC 1 0
+C1 va N001 {1/(2*pi*f0)}
+R2 va N001 2.22
+R3 N002 N001 1
+R4 N006 N005 1
+R5 N002 N006 1
+R1 N001 Vi 0.5346
+XU4 N003 0 vb opamp Aol=100K GBW=10Meg
+XU5 0 N011 N004 opamp Aol=100K GBW=10Meg
+R7 N011 vb 1
+XU6 N008 0 N007 opamp Aol=100K GBW=10Meg
+C3 N007 N011 {1/(2*pi*f0*1.215)}
+C4 vb N003 {1/(2*pi*f0*1.215)}
+R8 vb N003 4.5351
+R9 N004 N003 1
+R10 N008 N007 1
+R11 N004 N008 1
+R12 N003 N010 4.5351
+XU7 N012 0 vo opamp Aol=100K GBW=10Meg
+XU8 0 N017 N013 opamp Aol=100K GBW=10Meg
+R13 N017 vo 1
+XU9 N015 0 N014 opamp Aol=100K GBW=10Meg
+C5 N014 N017 {1/(2*pi*f0*0.822)}
+C6 vo N012 {1/(2*pi*f0*0.822)}
+R14 vo N012 4.5207
+R15 N013 N012 1
+R16 N015 N014 1
+R17 N013 N015 1
+R18 N012 N016 4.5207
+XU10 N010 va N010 opamp Aol=100K GBW=10Meg
+XU11 N016 vb N016 opamp Aol=100K GBW=10Meg
+.lib opamp.sub
+.ac dec 100 {f0/10} {f0*10}
+.param f0=2000
+.backanno
+.end
