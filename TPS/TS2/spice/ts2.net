@@ -1,0 +1,19 @@
+* C:\Users\juanc\OneDrive - UTN.BA\UTN\circuitos_2\TPS\TS2\spice\ts2.asc
+XU1 N001 0 Vbp opamp Aol=100K GBW=10Meg
+XU2 0 N004 Vlp opamp Aol=100K GBW=10Meg
+R1 N004 Vbp {R}
+XU3 N003 0 N002 opamp Aol=100K GBW=10Meg
+C1 N002 N004 {1/(R*wo)}
+V1 Vi 0 AC 1 0
+C2 Vbp N001 {1/(R*wo)}
+R2 Vbp N001 {Q*R}
+R3 Vlp N001 {R}
+R4 N003 N002 {R}
+R5 Vlp N003 {R}
+R6 N001 Vi {R/Klp}
+.lib opamp.sub
+.ac dec 100 {f0/100} {f0*100}
+.param Klp=10 Q=3 f0={1/(2*pi)} wo={f0*2*pi}
+.param R 1
+.backanno
+.end
