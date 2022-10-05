@@ -1,0 +1,19 @@
+* C:\Users\juanc\OneDrive - UTN.BA\UTN\Materias\4\circuitos_2\Práctica\TPS\TS12(no_obligatoria)\spice\circuito.asc
+XU1 N004 vo1 vo2 opamp Aol=100K GBW=10Meg
+R1 vo2 N004 1000
+R2 N004 0 1000
+R3 vo1 vo2 1.866667
+C1 vo1 vo2 178.571m
+R4 vo1 N003 1
+C2 N003 0 476.190m
+R5 N003 N002 1.09
+C3 N002 0 17.357
+R6 N002 N001 111.11m
+V1 N001 0 AC 1 0
+.inc opamp.sub
+.param f = w/(2*pi)
+.step dec param w 10m 100 30
+.ac list {f}
+* VNIC k=1
+.backanno
+.end
