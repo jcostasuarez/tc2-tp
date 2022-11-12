@@ -1,0 +1,11 @@
+* C:\Users\juanc\OneDrive - UTN.BA\UTN\Materias\4\circuitos_2\Práctica\TPS\TS15\spice\TS15_Rev2.asc
+R2 Vo 0 {Zn}
+V1 Vi 0 AC 1 0 Rser={Zn}
+L1 Vo N001 {(0.1922)*Zn/Wn}
+L2 N001 Vi {(1.255)*Zn/Wn}
+C1 0 N001 {(0.5528)*Zn/Wn}
+.net I(R2) v1
+.param Zn=1 F0=1 Wn=2*pi*F0
+.ac dec 30 {Wn/100} {Wn*10}
+.backanno
+.end
